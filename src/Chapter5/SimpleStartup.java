@@ -1,27 +1,28 @@
 package Chapter5;
 
-class SimpleStartup {
-    private int[] locationCells;
+import java.util.ArrayList;
+
+class SimpleStartup {/*
     private int numOfHits = 0;
 
-    public void setLocationCells(int[] locs) {
+    private ArrayList<String> locationCells;
+    public void setLocationCells(ArrayList<String> locs) {
         locationCells = locs;
     }
 
-    public String checkYourself(int guess) {
+    public String checkYourself(String userInput) {
         String result = "miss";
+        int index = locationCells.indexOf(userInput);
 
-        for (int cell : locationCells) {
-            if (guess == cell) {
+        if(index >= 0) {
+            locationCells.remove(index);
+
+            if (locationCells.isEmpty()){
+                result = "kill";
+            } else {
                 result = "hit";
-                numOfHits++;
-                break;
             }
         }
-        if (numOfHits == locationCells.length) {
-            result = "kill";
-        }
-        System.out.println(result);
         return result;
     }
 }
@@ -47,5 +48,5 @@ class SimpleStartupTestDrive{
                 System.out.println("You took " + numOfGuessed + " guesses");
             }
         }
-    }
+    }*/
 }
